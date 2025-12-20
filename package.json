@@ -5,10 +5,10 @@
   "type": "module",
   "license": "MIT",
   "author": "Vortiquo <dev@vortiquo.com>",
-  "homepage": "https://github.com/vortiquo/eslint-config#readme",
+  "homepage": "https://github.com/vortiquo/node-eslint-config#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vortiquo/eslint-config"
+    "url": "https://github.com/vortiquo/node-eslint-config"
   },
   "scripts": {
     "lint": "ls-lint",

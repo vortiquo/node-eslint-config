@@ -1,7 +1,7 @@
 # @vortiquo/eslint-config
 
 [![npm version](https://img.shields.io/npm/v/@vortiquo/eslint-config.svg)](https://www.npmjs.com/package/@vortiquo/eslint-config)
-[![license](https://img.shields.io/npm/l/@vortiquo/eslint-config.svg)](https://github.com/vortiquo/configs/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/@vortiquo/eslint-config.svg)](https://github.com/vortiquo/node-eslint-config/blob/main/LICENSE)
 
 Modern ESLint v9 flat configurations with TypeScript, React, and Node.js
 support.
