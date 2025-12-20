@@ -43,10 +43,12 @@
     "./base-typescript": "./base-typescript.js",
     "./react": "./react.js",
     "./react-library": "./react-library.js",
+    "./react-library-js": "./react-library-js.js",
     "./nextjs": "./nextjs.js",
     "./server": "./server.js",
     "./nestjs": "./nestjs.js",
-    "./node-library": "./node-library.js"
+    "./node-library": "./node-library.js",
+    "./node-library-js": "./node-library-js.js"
   },
   "files": [
     "index.js",
@@ -54,10 +56,12 @@
     "base-typescript.js",
     "react.js",
     "react-library.js",
+    "react-library-js.js",
     "nextjs.js",
     "server.js",
     "nestjs.js",
     "node-library.js",
+    "node-library-js.js",
     "README.md",
     "LICENSE"
   ],
