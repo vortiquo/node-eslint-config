@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/vortiquo/node-eslint-config/compare/v1.0.3...v1.1.0) (2025-12-20)
+
+
+### Features
+
+* add JavaScript library configs ([7030c5b](https://github.com/vortiquo/node-eslint-config/commit/7030c5b71fe767b8babf1fada83eeffbbe172a33))
+
 ## [1.0.3](https://github.com/vortiquo/node-eslint-config/compare/v1.0.2...v1.0.3) (2025-12-20)
 
 
