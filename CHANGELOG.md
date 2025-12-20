@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/vortiquo/node-eslint-config/compare/v1.0.2...v1.0.3) (2025-12-20)
+
+
+### Bug Fixes
+
+* enable release workflow ([ab56890](https://github.com/vortiquo/node-eslint-config/commit/ab56890d21184bb8c3efc19d627c58a7c39e157f))
+* update homepage and repository urls ([06a3cae](https://github.com/vortiquo/node-eslint-config/commit/06a3caee502caa5411eb0e62c4bb38a68086fbd0))
+* update repo urls ([88bc682](https://github.com/vortiquo/node-eslint-config/commit/88bc682b5d297007d9259f7b4ca1609e54c8c21a))
+
 ## [1.0.2](https://github.com/vortiquo/node-eslint-config/compare/v1.0.1...v1.0.2) (2025-12-20)
 
 
