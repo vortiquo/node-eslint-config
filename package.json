@@ -18,7 +18,7 @@
     "prepare": "husky"
   },
   "bugs": {
-    "url": "https://github.com/vortiquo/eslint-config/issues"
+    "url": "https://github.com/vortiquo/node-eslint-config/issues"
   },
   "publishConfig": {
     "access": "public"
