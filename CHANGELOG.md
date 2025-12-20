@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/vortiquo/node-eslint-config/compare/v1.1.0...v1.1.1) (2025-12-20)
+
+
+### Bug Fixes
+
+* update readme and split dependencies and devDependencies ([38fab67](https://github.com/vortiquo/node-eslint-config/commit/38fab673e22d80944d251dd2b6f089589f4fe423))
+
 # [1.1.0](https://github.com/vortiquo/node-eslint-config/compare/v1.0.3...v1.1.0) (2025-12-20)
 
 
