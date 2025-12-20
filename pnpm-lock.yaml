@@ -8,24 +8,12 @@ importers:
 
   .:
     dependencies:
-      '@commitlint/cli':
-        specifier: ^20.2.0
-        version: 20.2.0(@types/node@25.0.3)(typescript@5.9.3)
-      '@commitlint/config-conventional':
-        specifier: ^20.2.0
-        version: 20.2.0
       '@eslint/js':
         specifier: ^9.17.0
         version: 9.39.2
-      '@ls-lint/ls-lint':
-        specifier: ^2.3.1
-        version: 2.3.1
       '@next/eslint-plugin-next':
         specifier: ^16.1.0
         version: 16.1.0
-      cz-conventional-changelog:
-        specifier: ^3.3.0
-        version: 3.3.0(@types/node@25.0.3)(typescript@5.9.3)
       eslint:
         specifier: ^9.0.0
         version: 9.39.2(jiti@2.6.1)
@@ -56,6 +44,25 @@ importers:
       globals:
         specifier: ^16.5.0
         version: 16.5.0
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+      typescript-eslint:
+        specifier: ^8.18.1
+        version: 8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+    devDependencies:
+      '@commitlint/cli':
+        specifier: ^20.2.0
+        version: 20.2.0(@types/node@25.0.3)(typescript@5.9.3)
+      '@commitlint/config-conventional':
+        specifier: ^20.2.0
+        version: 20.2.0
+      '@ls-lint/ls-lint':
+        specifier: ^2.3.1
+        version: 2.3.1
+      cz-conventional-changelog:
+        specifier: ^3.3.0
+        version: 3.3.0(@types/node@25.0.3)(typescript@5.9.3)
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -65,12 +72,6 @@ importers:
       prettier:
         specifier: ^3.7.4
         version: 3.7.4
-      typescript:
-        specifier: ^5.0.0
-        version: 5.9.3
-      typescript-eslint:
-        specifier: ^8.18.1
-        version: 8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
 
 packages:
 
