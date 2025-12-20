@@ -1,0 +1,89 @@
+{
+  "name": "@vortiquo/eslint-config",
+  "version": "1.0.2",
+  "description": "Modern ESLint v9 flat configurations with TypeScript, React, Next.js, and Node.js support",
+  "type": "module",
+  "license": "MIT",
+  "author": "Vortiquo <dev@vortiquo.com>",
+  "homepage": "https://github.com/vortiquo/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vortiquo/eslint-config"
+  },
+  "scripts": {
+    "lint": "ls-lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "commit": "cz",
+    "prepare": "husky"
+  },
+  "bugs": {
+    "url": "https://github.com/vortiquo/eslint-config/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "eslint-flat-config",
+    "eslint9",
+    "typescript",
+    "react",
+    "nextjs",
+    "nestjs",
+    "nodejs",
+    "prettier",
+    "strict",
+    "shared-config"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./base": "./base.js",
+    "./base-typescript": "./base-typescript.js",
+    "./react": "./react.js",
+    "./react-library": "./react-library.js",
+    "./nextjs": "./nextjs.js",
+    "./server": "./server.js",
+    "./nestjs": "./nestjs.js",
+    "./node-library": "./node-library.js"
+  },
+  "files": [
+    "index.js",
+    "base.js",
+    "base-typescript.js",
+    "react.js",
+    "react-library.js",
+    "nextjs.js",
+    "server.js",
+    "nestjs.js",
+    "node-library.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "@eslint/js": "^9.17.0",
+    "@ls-lint/ls-lint": "^2.3.1",
+    "@next/eslint-plugin-next": "^16.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-turbo": "^2.3.3",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "typescript-eslint": "^8.18.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0"
+  }
+}

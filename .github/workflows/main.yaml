@@ -1,0 +1,25 @@
+name: Main CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  code-checks:
+    name: Run code checks and quality tools
+    uses: ./.github/workflows/_quality_checks.yaml
+
+  release:
+    name: Create a new production release
+    needs: [code-checks]
+    uses: ./.github/workflows/_release.yaml
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    with:
+      git_user_name: 'vortiquo-tech-bot'
+      git_user_email: 'tech.bot@vortiquo.com'

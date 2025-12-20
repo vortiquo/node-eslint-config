@@ -1,0 +1,61 @@
+name: Run semantic release
+
+on:
+  workflow_call:
+    inputs:
+      git_user_name:
+        description: 'Git user name for semantic release commits'
+        required: false
+        type: string
+      git_user_email:
+        description: 'Git user email for semantic release commits'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
+
+env:
+  HUSKY: 0
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  GIT_AUTHOR_NAME: ${{ inputs.git_user_name }}
+  GIT_AUTHOR_EMAIL: ${{ inputs.git_user_email }}
+  GIT_COMMITTER_NAME: ${{ inputs.git_user_name }}
+  GIT_COMMITTER_EMAIL: ${{ inputs.git_user_email }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    environment: 'Production'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # - name: Enable Corepack
+      #   run: corepack enable
+
+      # - name: 'Setup Node.js'
+      #   uses: actions/setup-node@v6
+      #   with:
+      #     node-version: '25'
+      #     cache: 'pnpm'
+      #     registry-url: https://registry.npmjs.org
+
+      # - name: Install dependencies
+      #   run: pnpm install
+
+      # - name: Release
+      #   uses: cycjimmy/semantic-release-action@v6
+      #   with:
+      #     semantic_version: 25.0.2
+      #     extra_plugins: |
+      #       @semantic-release/changelog@6.0.3
+      #       @semantic-release/git@10.0.1
+      #       @semantic-release/github@12.0.2
+      #       @semantic-release/exec@7.1.0

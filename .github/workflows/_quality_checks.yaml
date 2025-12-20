@@ -1,0 +1,26 @@
+name: Run code quality checks
+
+on: [workflow_call]
+
+jobs:
+  quality-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Check out code'
+        uses: actions/checkout@v6
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v6
+        with:
+          node-version: '25'
+          cache: 'pnpm'
+
+      # We just add prettier as it's the only dependency we need for this workflow
+      - name: Install dependencies
+        run: pnpm add prettier
+
+      - name: Run prettier (only check)
+        run: pnpm format:check

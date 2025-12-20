@@ -1,0 +1,16 @@
+name: Check PR
+
+on: [pull_request]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-commits:
+    name: Lint commit messages
+    uses: ./.github/workflows/_commitlint.yaml
+
+  code-checks:
+    name: Run code quality checks
+    uses: ./.github/workflows/_quality_checks.yaml

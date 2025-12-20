@@ -1,0 +1,9 @@
+// Re-export all configs for convenience
+export { base } from './base.js';
+export { baseTypescript } from './base-typescript.js';
+export { react } from './react.js';
+export { reactLibrary } from './react-library.js';
+export { nextjs } from './nextjs.js';
+export { server } from './server.js';
+export { nestjs } from './nestjs.js';
+export { nodeLibrary } from './node-library.js';
