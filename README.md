@@ -27,14 +27,16 @@ yarn add -D @vortiquo/eslint-config eslint typescript
 
 ## Available Configs
 
-| Config          | Use Case                              |
-| --------------- | ------------------------------------- |
-| `nextjs`        | Next.js applications                  |
-| `server`        | Backend APIs (Fastify, Express, Hono) |
-| `nestjs`        | NestJS applications                   |
-| `react`         | React applications                    |
-| `react-library` | React/UI component libraries          |
-| `node-library`  | Shared Node.js packages               |
+| Config             | Use Case                                  |
+| ------------------ | ----------------------------------------- |
+| `nextjs`           | Next.js applications                      |
+| `server`           | Backend APIs (Fastify, Express, Hono)     |
+| `nestjs`           | NestJS applications                       |
+| `react`            | React applications                        |
+| `react-library`    | React/UI component libraries (TypeScript) |
+| `react-library-js` | React/UI component libraries (JavaScript) |
+| `node-library`     | Shared Node.js packages (TypeScript)      |
+| `node-library-js`  | Shared Node.js packages (JavaScript)      |
 
 ## Usage
 
@@ -125,6 +127,24 @@ export default [
 ];
 ```
 
+### JavaScript Projects (No TypeScript)
+
+For projects without TypeScript, use the `-js` variants:
+
+```js
+// Node.js library (JavaScript)
+import { nodeLibraryJs } from '@vortiquo/eslint-config/node-library-js';
+
+export default [...nodeLibraryJs];
+```
+
+```js
+// React library (JavaScript)
+import { reactLibraryJs } from '@vortiquo/eslint-config/react-library-js';
+
+export default [...reactLibraryJs];
+```
+
 ## Extending Configs
 
 All configs are arrays that can be spread and extended:
@@ -178,6 +198,8 @@ export default [
 
 ```
 base (JS rules, Prettier, Turbo)
+├── node-library-js (JS Node.js packages)
+├── react-library-js (JS React libraries)
 └── base-typescript (TS strict rules)
     ├── react (React + Hooks)
     │   ├── react-library (stricter)
