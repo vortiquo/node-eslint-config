@@ -101,6 +101,8 @@ export const baseTypescript = [
   },
   // Disable type-aware linting for config files (typically not in tsconfig)
   {
+    // Spread disableTypeChecked FIRST, then override with our settings
+    ...tseslint.configs.disableTypeChecked,
     name: 'vortiquo/typescript/config-files',
     files: [
       '**/*.config.{js,ts,mjs,cjs}',
@@ -122,19 +124,8 @@ export const baseTypescript = [
       },
     },
     rules: {
-      // Disable type-aware rules (no tsconfig for these files)
-      '@typescript-eslint/no-unsafe-assignment': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
-      '@typescript-eslint/no-unsafe-call': 'off',
-      '@typescript-eslint/no-unsafe-return': 'off',
-      '@typescript-eslint/no-unsafe-argument': 'off',
-      '@typescript-eslint/require-await': 'off',
-      '@typescript-eslint/no-floating-promises': 'off',
-      '@typescript-eslint/await-thenable': 'off',
-      '@typescript-eslint/no-misused-promises': 'off',
-      '@typescript-eslint/no-unnecessary-condition': 'off',
-      '@typescript-eslint/strict-boolean-expressions': 'off',
-      '@typescript-eslint/consistent-type-exports': 'off',
+      // Spread the disableTypeChecked rules first, then add our overrides
+      ...tseslint.configs.disableTypeChecked.rules,
       // Relax strictness for config files
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
