@@ -83,6 +83,67 @@ export const baseTypescript = [
       ],
       // This one is too strict - TS already handles this well
       '@typescript-eslint/require-await': 'off',
+
+      // Enforce absolute imports (use tsconfig paths instead of relative)
+      'no-restricted-imports': [
+        'error',
+        {
+          patterns: [
+            {
+              group: ['src/**/*', '../**/*'],
+              message:
+                'Usage of src/* and ../**/* imports is not allowed, use paths defined in tsconfig',
+            },
+          ],
+        },
+      ],
+    },
+  },
+  // Disable type-aware linting for config files (typically not in tsconfig)
+  {
+    name: 'vortiquo/typescript/config-files',
+    files: [
+      '**/*.config.{js,ts,mjs,cjs}',
+      '**/.*rc.{js,ts,mjs,cjs}',
+      'eslint.config.*',
+      '.lintstagedrc.*',
+      'tsup.config.*',
+      'vitest.config.*',
+      'jest.config.*',
+      'tailwind.config.*',
+      'postcss.config.*',
+      'next.config.*',
+      'commitlint.config.*',
+      'prettier.config.*',
+    ],
+    languageOptions: {
+      parserOptions: {
+        projectService: false,
+      },
+    },
+    rules: {
+      // Disable type-aware rules (no tsconfig for these files)
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/require-await': 'off',
+      '@typescript-eslint/no-floating-promises': 'off',
+      '@typescript-eslint/await-thenable': 'off',
+      '@typescript-eslint/no-misused-promises': 'off',
+      '@typescript-eslint/no-unnecessary-condition': 'off',
+      '@typescript-eslint/strict-boolean-expressions': 'off',
+      '@typescript-eslint/consistent-type-exports': 'off',
+      // Relax strictness for config files
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      // Config files require default exports
+      'import/no-default-export': 'off',
+      // Allow console in config files
+      'no-console': 'off',
+      // Allow relative imports in config files (they often need it)
+      'no-restricted-imports': 'off',
     },
   },
 ];
