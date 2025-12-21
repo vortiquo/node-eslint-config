@@ -1,3 +1,10 @@
+## [1.2.2-beta.3](https://github.com/vortiquo/node-eslint-config/compare/v1.2.2-beta.2...v1.2.2-beta.3) (2025-12-21)
+
+
+### Bug Fixes
+
+* update TS configs as .config methods are deprecated ([8feca72](https://github.com/vortiquo/node-eslint-config/commit/8feca72510645da5da65196cfa5e7bd75d16a099))
+
 ## [1.2.2-beta.2](https://github.com/vortiquo/node-eslint-config/compare/v1.2.2-beta.1...v1.2.2-beta.2) (2025-12-21)
 
 
