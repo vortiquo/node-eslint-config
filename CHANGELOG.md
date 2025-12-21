@@ -1,3 +1,11 @@
+## [1.2.2-beta.1](https://github.com/vortiquo/node-eslint-config/compare/v1.2.1...v1.2.2-beta.1) (2025-12-21)
+
+
+### Bug Fixes
+
+* check configs before applying TS rules ([bc1e548](https://github.com/vortiquo/node-eslint-config/commit/bc1e548eae9a1618a9f566c15fcdd22c27a19436))
+* update TS configs to only apply to TS files ([fb0d21c](https://github.com/vortiquo/node-eslint-config/commit/fb0d21c30da1e418161bf21cfb0bdc00e5cb9c1e))
+
 ## [1.2.1](https://github.com/vortiquo/node-eslint-config/compare/v1.2.0...v1.2.1) (2025-12-21)
 
 
