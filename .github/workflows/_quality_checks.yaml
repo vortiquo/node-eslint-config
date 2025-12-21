@@ -29,3 +29,6 @@ jobs:
 
       - name: Run lint
         run: pnpm lint
+
+      - name: Validate ESLint configs
+        run: pnpm test
