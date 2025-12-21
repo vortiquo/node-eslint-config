@@ -1,6 +1,11 @@
 import { react } from './react.js';
 
 /**
+ * TypeScript file patterns - type-aware rules only apply to these
+ */
+const TS_FILES = ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'];
+
+/**
  * ESLint configuration for React component libraries.
  * Extends React config with library-specific rules.
  *
@@ -11,14 +16,19 @@ export const reactLibrary = [
   {
     name: 'vortiquo/react-library',
     rules: {
-      // Libraries should be stricter about exports
-      '@typescript-eslint/explicit-module-boundary-types': 'error',
-
       // No console in libraries
       'no-console': 'error',
 
       // Prefer named exports for tree-shaking
       'import/no-default-export': 'error',
+    },
+  },
+  {
+    name: 'vortiquo/react-library/typescript',
+    files: TS_FILES,
+    rules: {
+      // Libraries should be stricter about exports
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
     },
   },
   {

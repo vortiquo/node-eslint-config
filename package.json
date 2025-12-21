@@ -14,8 +14,9 @@
     "lint": "ls-lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "node scripts/validate-configs.js",
-    "prepack": "node scripts/validate-configs.js",
+    "test": "node scripts/validate-configs.js && node tests/test-configs.js",
+    "test:configs": "node tests/test-configs.js",
+    "prepack": "npm run test",
     "commit": "cz",
     "prepare": "husky"
   },
