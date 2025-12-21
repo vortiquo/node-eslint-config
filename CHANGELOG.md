@@ -1,3 +1,10 @@
+## [1.2.2-beta.4](https://github.com/vortiquo/node-eslint-config/compare/v1.2.2-beta.3...v1.2.2-beta.4) (2025-12-21)
+
+
+### Bug Fixes
+
+* relax unsafe assignment rule for config files ([7cc6e81](https://github.com/vortiquo/node-eslint-config/commit/7cc6e81dfb6f158da49483cc9f46dbdc986fed3e))
+
 ## [1.2.2-beta.3](https://github.com/vortiquo/node-eslint-config/compare/v1.2.2-beta.2...v1.2.2-beta.3) (2025-12-21)
 
 
