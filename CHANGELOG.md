@@ -5,6 +5,14 @@
 
 * spread disableTypeChecked ([da9e532](https://github.com/vortiquo/node-eslint-config/commit/da9e532e961811d68686e4dc276fa96b5aa0052f))
 
+## [1.2.1-beta.1](https://github.com/vortiquo/node-eslint-config/compare/v1.2.0...v1.2.1-beta.1) (2025-12-21)
+
+
+### Bug Fixes
+
+* spread disableTypeChecked ([da9e532](https://github.com/vortiquo/node-eslint-config/commit/da9e532e961811d68686e4dc276fa96b5aa0052f))
+* update TS configs to only apply to TS files ([f5d69a8](https://github.com/vortiquo/node-eslint-config/commit/f5d69a83e613fea9f3a1b02ad4ad8a89d79f4a81))
+
 # [1.2.0](https://github.com/vortiquo/node-eslint-config/compare/v1.1.1...v1.2.0) (2025-12-21)
 
 
