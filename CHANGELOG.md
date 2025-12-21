@@ -1,3 +1,14 @@
+## [1.2.2](https://github.com/vortiquo/node-eslint-config/compare/v1.2.1...v1.2.2) (2025-12-21)
+
+
+### Bug Fixes
+
+* check configs before applying TS rules ([578c18f](https://github.com/vortiquo/node-eslint-config/commit/578c18fce8643998fc858b41eaed0e44ff058e5e))
+* relax unsafe assignment rule for config files ([cf5eb4d](https://github.com/vortiquo/node-eslint-config/commit/cf5eb4df980ab1e7745ee321423148e6e6d0b9ab))
+* update TS configs as .config methods are deprecated ([19702cd](https://github.com/vortiquo/node-eslint-config/commit/19702cd22b4396a6bcfb04b201189873ae8e07d9))
+* update TS configs to only apply to TS files ([5f64dcd](https://github.com/vortiquo/node-eslint-config/commit/5f64dcd8ab36ed81da92c05335b0d471dd56f955))
+* update TS rules to be TS file specific ([6133c95](https://github.com/vortiquo/node-eslint-config/commit/6133c958d4f82182324e455dab311114bf6ba6d3))
+
 ## [1.2.2-beta.4](https://github.com/vortiquo/node-eslint-config/compare/v1.2.2-beta.3...v1.2.2-beta.4) (2025-12-21)
 
 
