@@ -39,14 +39,16 @@ export const baseTypescript = [
   },
 
   // Apply type-checked rules ONLY to TypeScript files
-  // Use the recommended approach from typescript-eslint docs
-  ...tseslint.config({
+  // Apply strict type-checked rules to TS files
+  ...tseslint.configs.strictTypeChecked.map((config) => ({
+    ...config,
     files: TS_FILES,
-    extends: [
-      tseslint.configs.strictTypeChecked,
-      tseslint.configs.stylisticTypeChecked,
-    ],
-  }),
+  })),
+  // Apply stylistic type-checked rules to TS files
+  ...tseslint.configs.stylisticTypeChecked.map((config) => ({
+    ...config,
+    files: TS_FILES,
+  })),
 
   // TypeScript-specific settings and rules (only for TS files)
   {
