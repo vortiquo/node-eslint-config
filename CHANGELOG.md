@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/vortiquo/node-eslint-config/compare/v1.2.2...v1.2.3) (2025-12-21)
+
+
+### Bug Fixes
+
+* add relaxations for config files ([2aca9fe](https://github.com/vortiquo/node-eslint-config/commit/2aca9fe0befeaa8f774898346683606d2bdabeb4))
+
 ## [1.2.2](https://github.com/vortiquo/node-eslint-config/compare/v1.2.1...v1.2.2) (2025-12-21)
 
 
