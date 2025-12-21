@@ -69,6 +69,22 @@ export const base = [
       '**/public/**',
     ],
   },
+  // Relaxations for config files
+  {
+    name: 'vortiquo/base/config-files',
+    files: [
+      '**/*.config.{js,ts,mjs,cjs}',
+      '**/.*rc.{js,ts,mjs,cjs}',
+      'eslint.config.*',
+      '.lintstagedrc.*',
+    ],
+    rules: {
+      // Config files require default exports
+      'import/no-default-export': 'off',
+      // Allow console in config files
+      'no-console': 'off',
+    },
+  },
 ];
 
 export default base;

@@ -2,17 +2,36 @@ import tseslint from 'typescript-eslint';
 import { base } from './base.js';
 
 /**
+ * TypeScript file patterns - type-aware rules only apply to these
+ */
+const TS_FILES = ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'];
+
+/**
  * Base TypeScript ESLint configuration.
  * Extends base config with TypeScript-specific rules.
+ *
+ * Type-aware rules are ONLY applied to TypeScript files (.ts, .tsx, .mts, .cts).
+ * JavaScript files (including config files like eslint.config.js) are not affected.
  *
  * @type {import("eslint").Linter.Config[]}
  */
 export const baseTypescript = [
   ...base,
-  ...tseslint.configs.strictTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+
+  // Apply type-checked configs ONLY to TypeScript files
+  ...tseslint.configs.strictTypeChecked.map((config) => ({
+    ...config,
+    files: TS_FILES,
+  })),
+  ...tseslint.configs.stylisticTypeChecked.map((config) => ({
+    ...config,
+    files: TS_FILES,
+  })),
+
+  // TypeScript-specific settings and rules (only for TS files)
   {
     name: 'vortiquo/typescript',
+    files: TS_FILES,
     languageOptions: {
       parserOptions: {
         projectService: true,
@@ -99,41 +118,13 @@ export const baseTypescript = [
       ],
     },
   },
-  // Disable type-aware linting for config files (typically not in tsconfig)
+
+  // Allow relative imports in config files (only applies to TS files since
+  // no-restricted-imports is only defined in base-typescript)
   {
-    // Spread disableTypeChecked FIRST, then override with our settings
-    ...tseslint.configs.disableTypeChecked,
     name: 'vortiquo/typescript/config-files',
-    files: [
-      '**/*.config.{js,ts,mjs,cjs}',
-      '**/.*rc.{js,ts,mjs,cjs}',
-      'eslint.config.*',
-      '.lintstagedrc.*',
-      'tsup.config.*',
-      'vitest.config.*',
-      'jest.config.*',
-      'tailwind.config.*',
-      'postcss.config.*',
-      'next.config.*',
-      'commitlint.config.*',
-      'prettier.config.*',
-    ],
-    languageOptions: {
-      parserOptions: {
-        projectService: false,
-      },
-    },
+    files: ['**/*.config.ts', '**/*.config.mts', '**/*.config.cts'],
     rules: {
-      // Spread the disableTypeChecked rules first, then add our overrides
-      ...tseslint.configs.disableTypeChecked.rules,
-      // Relax strictness for config files
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      // Config files require default exports
-      'import/no-default-export': 'off',
-      // Allow console in config files
-      'no-console': 'off',
-      // Allow relative imports in config files (they often need it)
       'no-restricted-imports': 'off',
     },
   },
