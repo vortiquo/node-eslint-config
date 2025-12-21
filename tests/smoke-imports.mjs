@@ -1,0 +1,16 @@
+await import('@vortiquo/eslint-config');
+await import('@vortiquo/eslint-config/base');
+await import('@vortiquo/eslint-config/ts');
+await import('@vortiquo/eslint-config/ts/strict');
+await import('@vortiquo/eslint-config/server');
+await import('@vortiquo/eslint-config/server/strict');
+await import('@vortiquo/eslint-config/react');
+await import('@vortiquo/eslint-config/react/strict');
+await import('@vortiquo/eslint-config/react-lib');
+await import('@vortiquo/eslint-config/react-lib/strict');
+await import('@vortiquo/eslint-config/next');
+await import('@vortiquo/eslint-config/next/strict');
+await import('@vortiquo/eslint-config/node-lib');
+await import('@vortiquo/eslint-config/node-lib/strict');
+await import('@vortiquo/eslint-config/node-lib/js');
+await import('@vortiquo/eslint-config/node-lib/js-strict');
