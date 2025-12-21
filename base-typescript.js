@@ -148,6 +148,7 @@ export const baseTypescript = [
     files: ['**/*.config.ts', '**/*.config.mts', '**/*.config.cts'],
     rules: {
       'no-restricted-imports': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
     },
   },
 ];
