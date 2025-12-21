@@ -18,29 +18,34 @@ const TS_FILES = ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'];
 export const baseTypescript = [
   ...base,
 
-  // Apply type-checked configs ONLY to TypeScript files
-  // We need to filter out configs that don't have rules (plugin definitions)
-  // and only add files restriction to configs that have rules
-  ...tseslint.configs.strictTypeChecked.map((config) => {
-    // If this config has rules, scope it to TS files only
-    if (config.rules && Object.keys(config.rules).length > 0) {
-      return { ...config, files: TS_FILES };
-    }
-    // Plugin/parser configs stay global but we add files to scope parsing
-    if (config.languageOptions?.parser) {
-      return { ...config, files: TS_FILES };
-    }
-    // Plugin registration stays global (no files restriction)
-    return config;
-  }),
-  ...tseslint.configs.stylisticTypeChecked.map((config) => {
-    if (config.rules && Object.keys(config.rules).length > 0) {
-      return { ...config, files: TS_FILES };
-    }
-    if (config.languageOptions?.parser) {
-      return { ...config, files: TS_FILES };
-    }
-    return config;
+  // Global TypeScript plugin registration (plugins must be defined globally)
+  {
+    name: 'vortiquo/typescript-plugins',
+    plugins: {
+      '@typescript-eslint': tseslint.plugin,
+    },
+  },
+
+  // TypeScript parser and language options (scoped to TS files)
+  {
+    name: 'vortiquo/typescript-parser',
+    files: TS_FILES,
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  },
+
+  // Apply type-checked rules ONLY to TypeScript files
+  // Use the recommended approach from typescript-eslint docs
+  ...tseslint.config({
+    files: TS_FILES,
+    extends: [
+      tseslint.configs.strictTypeChecked,
+      tseslint.configs.stylisticTypeChecked,
+    ],
   }),
 
   // TypeScript-specific settings and rules (only for TS files)

@@ -2,6 +2,11 @@ import globals from 'globals';
 import { baseTypescript } from './base-typescript.js';
 
 /**
+ * TypeScript file patterns - type-aware rules only apply to these
+ */
+const TS_FILES = ['**/*.ts', '**/*.tsx', '**/*.mts', '**/*.cts'];
+
+/**
  * ESLint configuration for backend APIs (Fastify, Express, Hono).
  * Extends TypeScript config with Node.js-specific rules.
  *
@@ -22,7 +27,12 @@ export const server = [
 
       // Backend-specific rules
       'no-process-exit': 'off',
-
+    },
+  },
+  {
+    name: 'vortiquo/server/typescript',
+    files: TS_FILES,
+    rules: {
       // Stricter for backend code
       '@typescript-eslint/explicit-function-return-type': 'error',
       '@typescript-eslint/explicit-module-boundary-types': 'error',
