@@ -26,10 +26,32 @@ export const baseTypescript = [
     },
   },
 
-  // TypeScript parser and language options (scoped to TS files)
+  // Allow relative imports in config files (only applies to TS files since
+  // no-restricted-imports is only defined in base-typescript)
+  {
+    name: 'vortiquo/typescript/config-files',
+    files: ['**/*.config.ts', '**/*.config.mts', '**/*.config.cts'],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        projectService: false, // Config files don't need full project analysis
+      },
+    },
+    rules: {
+      // Inherit base config file rules
+      'import/no-default-export': 'off',
+      'no-console': 'off',
+      // TypeScript-specific overrides
+      'no-restricted-imports': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+    },
+  },
+
+  // TypeScript parser and language options (scoped to TS files, excluding config files)
   {
     name: 'vortiquo/typescript-parser',
     files: TS_FILES,
+    ignores: ['**/*.config.ts', '**/*.config.mts', '**/*.config.cts'],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
@@ -138,17 +160,6 @@ export const baseTypescript = [
           ],
         },
       ],
-    },
-  },
-
-  // Allow relative imports in config files (only applies to TS files since
-  // no-restricted-imports is only defined in base-typescript)
-  {
-    name: 'vortiquo/typescript/config-files',
-    files: ['**/*.config.ts', '**/*.config.mts', '**/*.config.cts'],
-    rules: {
-      'no-restricted-imports': 'off',
-      '@typescript-eslint/no-unsafe-assignment': 'off',
     },
   },
 ];

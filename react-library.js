@@ -31,14 +31,6 @@ export const reactLibrary = [
       '@typescript-eslint/explicit-module-boundary-types': 'error',
     },
   },
-  {
-    name: 'vortiquo/react-library/config-files',
-    files: ['**/*.config.{js,ts,mjs}', '**/tsup.config.ts'],
-    rules: {
-      'import/no-default-export': 'off',
-      'no-console': 'off',
-    },
-  },
 ];
 
 export default reactLibrary;

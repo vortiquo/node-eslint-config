@@ -67,14 +67,6 @@ export const reactLibraryJs = [
       'react/jsx-props-no-spreading': 'off',
     },
   },
-  {
-    name: 'vortiquo/react-library-js/config-files',
-    files: ['**/*.config.{js,mjs,cjs}', '**/.*rc.{js,mjs,cjs}'],
-    rules: {
-      'import/no-default-export': 'off',
-      'no-console': 'off',
-    },
-  },
 ];
 
 export default reactLibraryJs;

@@ -44,14 +44,6 @@ export const server = [
       '@typescript-eslint/promise-function-async': 'error',
     },
   },
-  {
-    name: 'vortiquo/server/config-files',
-    files: ['**/*.config.{js,ts,mjs}'],
-    rules: {
-      // Config files often use default exports
-      'import/no-default-export': 'off',
-    },
-  },
 ];
 
 export default server;

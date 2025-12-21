@@ -21,14 +21,6 @@ export const nodeLibraryJs = [
       'no-console': 'error',
     },
   },
-  {
-    name: 'vortiquo/node-library-js/config-files',
-    files: ['**/*.config.{js,mjs,cjs}', '**/.*rc.{js,mjs,cjs}'],
-    rules: {
-      'import/no-default-export': 'off',
-      'no-console': 'off',
-    },
-  },
 ];
 
 export default nodeLibraryJs;

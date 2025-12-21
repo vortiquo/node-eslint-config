@@ -39,14 +39,6 @@ export const nodeLibrary = [
       '@typescript-eslint/require-await': 'error',
     },
   },
-  {
-    name: 'vortiquo/node-library/config-files',
-    files: ['**/*.config.{js,ts,mjs}', '**/tsup.config.ts'],
-    rules: {
-      'import/no-default-export': 'off',
-      'no-console': 'off',
-    },
-  },
 ];
 
 export default nodeLibrary;
