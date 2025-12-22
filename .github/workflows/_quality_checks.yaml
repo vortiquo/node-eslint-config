@@ -27,6 +27,9 @@ jobs:
       - name: Run prettier (only check)
         run: pnpm format:check
 
+      - name: Run directory lint
+        run: pnpm ls-lint
+
       - name: Run lint
         run: pnpm lint
 
