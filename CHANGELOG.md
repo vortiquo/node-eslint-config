@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/vortiquo/node-eslint-config/compare/v2.0.0...v2.1.0) (2025-12-22)
+
+
+### Features
+
+* add style rules for ts and react-lib ([2c7899e](https://github.com/vortiquo/node-eslint-config/commit/2c7899e383ed3c8cdb78fb1324de59cb1710d77d))
+
 # [2.0.0](https://github.com/vortiquo/node-eslint-config/compare/v1.2.3...v2.0.0) (2025-12-22)
 
 

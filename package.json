@@ -1,6 +1,6 @@
 {
   "name": "@vortiquo/eslint-config",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Modern ESLint v9 flat configurations with TypeScript, React, Next.js, and Node.js support",
   "type": "module",
   "license": "MIT",
