@@ -1,3 +1,20 @@
+# [2.0.0](https://github.com/vortiquo/node-eslint-config/compare/v1.2.3...v2.0.0) (2025-12-22)
+
+
+* feat!: refactor project structure and add tests ([30dfce9](https://github.com/vortiquo/node-eslint-config/commit/30dfce9380aa76691b4766093b7fd98d04ff3921))
+
+
+### Bug Fixes
+
+* rename fixtures to button-example ([8371c82](https://github.com/vortiquo/node-eslint-config/commit/8371c8280884d0665ddb6c05c11bc993995bbf5d))
+
+
+### BREAKING CHANGES
+
+* - Presets are now exported via subpaths (e.g. @vortiquo/eslint-config/react/strict)
+- Old root-level imports are no longer supported
+- ESLint configs must be consumed via flat config arrays
+
 ## [1.2.3](https://github.com/vortiquo/node-eslint-config/compare/v1.2.2...v1.2.3) (2025-12-21)
 
 
