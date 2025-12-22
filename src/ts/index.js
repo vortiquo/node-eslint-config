@@ -42,6 +42,22 @@ export const baseTs = [
           minimumDescriptionLength: 5,
         },
       ],
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        {
+          allowNumber: true,
+          allowBoolean: true,
+          allowNullish: false,
+        },
+      ],
+    },
+  },
+
+  {
+    name: '@vortiquo/ts:style',
+    files: TS_FILES,
+    rules: {
+      '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
     },
   },
 

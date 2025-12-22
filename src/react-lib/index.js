@@ -58,6 +58,14 @@ export const reactLib = [
     },
   },
 
+  {
+    name: '@vortiquo/react-lib:style',
+    files: ['src/**/*.{ts,tsx}'],
+    rules: {
+      '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    },
+  },
+
   // TypeScript-specific expectations for libs
   {
     name: '@vortiquo/react-lib:ts',
