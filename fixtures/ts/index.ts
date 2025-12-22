@@ -1,8 +1,8 @@
 // TypeScript ESLint configuration fixture
-interface User {
+type User = {
   name: string;
   age: number;
-}
+};
 
 const user: User = {
   name: 'John Doe',

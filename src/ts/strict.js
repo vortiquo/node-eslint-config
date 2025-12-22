@@ -32,6 +32,14 @@ export const tsStrictTypeAware = [
     name: '@vortiquo/ts:strict-extras',
     files: TS_FILES,
     rules: {
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        {
+          allowNumber: true,
+          allowBoolean: true,
+          allowNullish: false,
+        },
+      ],
       '@typescript-eslint/no-floating-promises': 'error',
       '@typescript-eslint/no-misused-promises': [
         'error',

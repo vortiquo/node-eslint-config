@@ -1,11 +1,11 @@
 // React ESLint configuration fixture
 import React from 'react';
 
-interface ButtonProps {
+type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-}
+};
 
 export const Button: React.FC<ButtonProps> = ({
   children,

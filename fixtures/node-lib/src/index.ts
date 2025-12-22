@@ -2,11 +2,11 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-export interface PackageInfo {
+export type PackageInfo = {
   readonly name: string;
   readonly version: string;
   readonly description?: string;
-}
+};
 
 export function readPackageInfo(packagePath: string = '.'): PackageInfo {
   try {

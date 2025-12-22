@@ -1,12 +1,12 @@
 // React Library Strict ESLint configuration fixture
 import React, { useCallback } from 'react';
 
-export interface ButtonProps {
+export type ButtonProps = {
   readonly children: React.ReactNode;
   readonly onClick?: () => void;
   readonly variant?: 'primary' | 'secondary';
   readonly size?: 'small' | 'medium' | 'large';
-}
+};
 
 const BUTTON_STYLES = {
   base: {

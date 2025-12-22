@@ -1,9 +1,9 @@
 // Next.js Strict ESLint configuration fixture
 import React from 'react';
 
-interface HomePageProps {
+type HomePageProps = {
   readonly searchParams: { [key: string]: string | string[] | undefined };
-}
+};
 
 export default function HomePage({ searchParams }: HomePageProps) {
   const greeting = (searchParams?.greeting as string) || 'Hello, Next.js!';

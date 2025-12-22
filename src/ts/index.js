@@ -42,14 +42,6 @@ export const baseTs = [
           minimumDescriptionLength: 5,
         },
       ],
-      '@typescript-eslint/restrict-template-expressions': [
-        'error',
-        {
-          allowNumber: true,
-          allowBoolean: true,
-          allowNullish: false,
-        },
-      ],
     },
   },
 

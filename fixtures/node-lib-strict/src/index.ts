@@ -2,17 +2,17 @@
 import { promises as fsPromises } from 'fs';
 import { resolve } from 'path';
 
-export interface PackageInfo {
+export type PackageInfo = {
   readonly name: string;
   readonly version: string;
   readonly description?: string;
   readonly keywords?: readonly string[];
-}
+};
 
-export interface ValidationResult {
+export type ValidationResult = {
   readonly isValid: boolean;
   readonly errors: readonly string[];
-}
+};
 
 export async function readPackageInfoAsync(
   packagePath: string = '.'

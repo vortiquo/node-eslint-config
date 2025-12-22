@@ -1,11 +1,11 @@
 // React Strict ESLint configuration fixture
 import React, { useCallback, useState } from 'react';
 
-interface ButtonProps {
+type ButtonProps = {
   readonly children: React.ReactNode;
   readonly onClick?: () => void;
   readonly disabled?: boolean;
-}
+};
 
 export const Button: React.FC<ButtonProps> = React.memo(
   ({ children, onClick, disabled = false }) => {

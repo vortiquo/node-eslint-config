@@ -22,8 +22,6 @@ export const reactLibStrict = [
       // Catch subtle API bugs
       '@typescript-eslint/no-unnecessary-condition': 'error',
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
-
-      // En libs sí suele ser buena idea
       '@typescript-eslint/no-explicit-any': 'error',
     },
   },

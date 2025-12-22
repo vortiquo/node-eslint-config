@@ -33,10 +33,8 @@ export const react = [
       ...reactPlugin.configs.recommended.rules,
       ...reactPlugin.configs['jsx-runtime'].rules,
 
-      // React Hooks recommended (ya incluye rules-of-hooks + exhaustive-deps)
+      // React Hooks recommended (includes rules-of-hooks + exhaustive-deps)
       ...reactHooksPlugin.configs.recommended.rules,
-
-      // Preferencias (opinionadas pero OK)
       'react/prop-types': 'off',
       'react/jsx-no-target-blank': 'error',
       'react/jsx-curly-brace-presence': [
@@ -44,18 +42,16 @@ export const react = [
         { props: 'never', children: 'never' },
       ],
       'react/self-closing-comp': 'error',
-
-      // Esta es MUY opinionada; si no quieren ruido, muévanla a reactStrict
       'react/jsx-sort-props': [
         'warn',
         { callbacksLast: true, shorthandFirst: true, reservedFirst: true },
       ],
 
-      // TS suele encargarse mejor de types de props / defaults
+      // TypeScript handles prop types and defaults better
       'react/require-default-props': 'off',
       'react/jsx-props-no-spreading': 'off',
 
-      // En React components normalmente no quieres forzar return type
+      // In React components you typically don't want to enforce return types
       '@typescript-eslint/explicit-function-return-type': 'off',
     },
   },
