@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/vortiquo/node-eslint-config/compare/v2.1.0...v2.1.1) (2026-01-17)
+
+
+### Bug Fixes
+
+* **deps:** bump the production-minor-patch group with 3 updates ([#2](https://github.com/vortiquo/node-eslint-config/issues/2)) ([3cc51d4](https://github.com/vortiquo/node-eslint-config/commit/3cc51d4df0c3452c811c5fb00fd926127e0c2a89))
+
 # [2.1.0](https://github.com/vortiquo/node-eslint-config/compare/v2.0.0...v2.1.0) (2025-12-22)
 
 
